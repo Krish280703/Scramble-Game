@@ -72,7 +72,11 @@ for letter in myTiles:
     print(letter , ":" , getLetterScore(letter))
 word = input("Enter a valid word: ")
 word.upper()
-if (isValid(word,myTiles,Dictionary) == True):
-    print("The score of the word is : ",getWordScore(word))
-else:
-    print("Invalid input")
+while True:
+    if (isValid(word,myTiles,Dictionary) == True):
+        print("The score of the word is : ",getWordScore(word))
+        break;
+    else:
+        print("Try Again")
+        word = input("Enter a valid word: ")
+        word.upper()
